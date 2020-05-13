@@ -1,0 +1,19 @@
+mysql -u root -p
+(contraseña)
+--------------------
+create database prueba_mysql_python;
+use prueba_mysql_python;
+ALTER DATABASE prueba_mysql_python CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+create user 'prueba_py_mysql'@'%' identified by 'root';
+grant all privileges on prueba_mysql_python.* to 'prueba_py_mysql'@'%' identified by 'root';
+---------------------
+mysql -u prueba_py_mysql -p
+root
+use prueba_mysql_python;
+--------------------
+source sql/tables/contacts.sql
+--------------------
+--------------------
+--------------------
+virtualenv venv  
+runapp.bat 
